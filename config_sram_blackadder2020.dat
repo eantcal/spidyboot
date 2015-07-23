@@ -1,0 +1,77 @@
+40:424f4f54
+44:00000000
+48:00080000
+4c:00000000
+50:00001000
+54:00000000
+58:11000000
+5c:00000000
+60:1107F000
+64:00000000
+68:00000021    /* (0x180 - 0x80) / 8 + 1 = 0x21 */
+
+80:ff70fc00    /* setting priority of GPIO for Blackadder, input, output or open drain */
+84:00320000    /* GPIO10 are used to fetch watchdog, GPIO 11 & 14 are used for LED */
+88:ff70fc04
+8c:00000000
+90:ff70fc08    /* set the GPIO11 = 0;  GPIO 14 = 1 ; then the value = 0x00020000 */
+94:00020000    /* if we want to set GPIO 11 = 1; GPIO 14 = 0; then the value = 0x00100000 */
+98:ff702110    1
+9c:67000008
+a0:ff702000    2
+a4:0000003f    
+a8:ff702008    3
+ac:0040007f
+b0:ff702080    4
+b4:80014202
+b8:ff702084    5
+bc:80014202
+c0:ff702104    6
+c4:00330804    
+c8:ff702108    7    /* Change CL to 6 */
+cc:6f6b4644
+d0:ff70210c    8
+d4:0fa890d0
+d8:ff702100    9
+dc:00020000
+e0:ff702114    10
+e4:24400010
+e8:ff702118    11    /* Mode Register : Change CL to 6 */
+ec:00401422
+f0:ff70211c    12
+f4:00000000
+f8:ff702120    13
+fc:00000000
+100:ff702124    14
+104:61800100
+108:ff702128    15
+10c:deadbeef
+110:ff702130    16
+114:02800000         /* May be 03000000 which means 6/8 clock */
+118:ff702160    17
+11c:00220001
+120:ff702164    18
+124:03402400
+128:ff702170    19
+12c:89080600
+130:ff702174    20
+134:8655a608
+138:ff702e48    21
+13c:0000000d
+140:ff702e58    22
+144:00010000
+148:ff702b28    23
+14c:000C0000
+150:ff702b2c    24
+154:00000000
+158:40000001    25
+15c:00000100
+160:ff702110    26
+164:e7000008
+168:40000001    27
+16c:00000100
+170:ff700C08
+174:00000000    Configure LAW0 Start Address = 0
+178:ff700D70
+17c:80F0001E    Configure LAW0 Size = 2G, TRGT is DDR Memory Controller. We will modify the LAW0 at uboot.
+180:efefefef
