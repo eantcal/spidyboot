@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.68)
-AC_INIT([spidyboot],[1.0],[someone@somewhere.com])
+AC_INIT([spidyboot],[1.0],[acaldmail@gmail.com])
 AC_CONFIG_SRCDIR([spidyboot.cc])
 AC_CONFIG_HEADER([config.h])
 AC_CANONICAL_HOST
