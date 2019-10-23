@@ -665,7 +665,7 @@ class boot_spi_data_t
 
         inline unsigned int get_dword(int offset) const throw()
         {
-            unsigned int value = 
+            const unsigned int value = 
                 (_data[offset + 0]<<24) + 
                 (_data[offset + 1]<<16) + 
                 (_data[offset + 2]<<8)  +  
