@@ -202,7 +202,7 @@ class mc_config_t
                     sscanf(address.c_str(), "%x", &ulAddr);
                     sscanf(value.c_str(), "%x", &ulVal);
 
-                    lst.push_back( std::make_pair< addr_t, value_t> ( ulAddr, ulVal ) );
+                    lst.push_back( { ulAddr, ulVal } );
 
                     continue;
                 }
@@ -253,7 +253,7 @@ class mc_config_t
                     sscanf(address.c_str(), "%x", &ulAddr);
                     sscanf(value.c_str(), "%x", &ulVal);
 
-                    lst.push_back( std::make_pair< addr_t, value_t> ( ulAddr, ulVal ) );
+                    lst.push_back( { ulAddr, ulVal } );
 
                     continue;
                 }
@@ -341,7 +341,7 @@ class mc_config_t
                 sscanf(address.c_str(), "%x", &ulAddr);
                 sscanf(value.c_str(), "%x", &ulVal);
 
-                lst.push_back( std::make_pair< addr_t, value_t> ( ulAddr, ulVal ) );
+                lst.push_back( { ulAddr, ulVal } );
 
             } // while
 
