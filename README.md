@@ -1,4 +1,5 @@
 # spidyboot
+| Linux  | [![Linux Build](https://travis-ci.org/eantcal/spidyboot.svg?branch=master)](https://travis-ci.org/eantcal/spidyboot)  |
 
 ## SPI bootable image maker
 This is a tool to create or modify SPI bootable images for Freescale PowerPC spi/flash devices.
